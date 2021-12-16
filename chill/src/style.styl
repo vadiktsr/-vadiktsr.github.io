@@ -1,0 +1,237 @@
+*
+  box-sizing border-box
+
+:root
+  --depth 5vmin
+  --on 0
+  --size 25vmin
+  --bg 'hsl(%s, %s, %s)' % (calc(200 - (var(--on) * 160)) calc((20 + (var(--on) * 50)) * 1%) calc((20 + (var(--on) * 60)) * 1%))
+  --cord 'hsl(0, 0%, %s)' % (calc((60 - (var(--on) * 50)) * 1%))
+  --stroke 'hsl(0, 0%, %s)' % (calc((60 - (var(--on) * 50)) * 1%))
+  --shine 'hsla(0, 0%, 100%, %s)' % calc(0.75 - (var(--on) * 0.5))
+  --cap 'hsl(0, 0%, %s)' % calc((40 + (var(--on) * 30)) * 1%)
+  --filament 'hsl(45, %s, %s)' % (calc(var(--on) * 80%) calc((25 + (var(--on) * 75)) * 1%))
+body
+  min-height 100vh
+  display flex
+  align-items center
+  justify-content center
+  background var(--bg)
+  overflow hidden
+  // perspective 800px
+
+label
+  position absolute
+  opacity 0.5
+  height 100%
+  width 100%
+  top 0
+  left 0
+  z-index 2
+
+input
+  height 0
+  width 0
+  position fixed
+  left 100%
+  transform scale(0)
+
+.toggle
+  height var(--size)
+  width var(--size)
+  transform translate(-50%, -100%)
+  z-index 2
+  position absolute
+  top 50%
+  left 50%
+  transform translate3d(-50%, -100%, calc(var(--depth) * 3))
+
+.toggle-scene
+  // !important for CodePen
+  overflow visible !important
+  width 100%
+  position absolute
+
+  &__arm
+    display none
+
+  &__cord
+    stroke var(--cord)
+    cursor move
+
+    // Hide all cords if there's no JavaScript?
+    &:nth-of-type(1)
+      display none
+
+    // Hide cords by default
+    &:nth-of-type(2)
+    &:nth-of-type(3)
+    &:nth-of-type(4)
+    &:nth-of-type(5)
+      display none
+
+    &-end
+      stroke var(--cord)
+      fill var(--cord)
+
+.toggle-scene__dummy-cord
+  stroke-width 6
+  stroke var(--cord)
+
+.bulb
+  &__filament
+    stroke var(--filament)
+  &__shine
+    stroke var(--shine)
+  &__flash
+    stroke hsl(45, 80%, 80%)
+    display none
+  &__bulb
+    stroke var(--stroke)
+    fill 'hsla(%s, 80%, 80%, %s)' % (calc(180 - (95 * var(--on))) calc(0.1 + (0.4 * var(--on))))
+  &__cap
+    fill var(--cap)
+    &-shine
+      fill var(--shine)
+    &-outline
+      stroke var(--stroke)
+
+.bear
+  display none
+  &__fur
+    fill #784421
+  &__pad
+    fill #deaa87
+
+.doorway
+  position absolute
+  top 50%
+  height calc(var(--size) * 4)
+  width calc(var(--size) * 1.5)
+  transform translate(0, calc(var(--size) * -0.75))
+  left calc(50% + (var(--size) * 0.5))
+  $clip = inset(0 0 0 -200%)
+  -webkit-clip-path $clip
+  clip-path $clip
+
+  &__opening
+    height 100%
+    width 100%
+    position absolute
+    background hsl(0, 0%, 10%)
+    transform translate3d(0, 0, calc(var(--depth) * -1))
+
+.bear
+  position absolute
+  top 10%
+  width var(--size)
+
+.door
+  --panel 'hsl(30, 20%, %s)' % calc(12% + (var(--on) * 40%))
+  height 100%
+  position absolute
+  width 100%
+  transform-origin 100% 50%
+  transform-style preserve-3d
+  transform rotateY(0deg)
+  // opacity 0.5
+
+  &__panel
+    width 30%
+    height 35%
+    position absolute
+    border 1vmin var(--panel) solid
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) translate(var(--x), var(--y))
+
+    &:nth-of-type(1)
+      --x -70%
+      --y -70%
+    &:nth-of-type(2)
+      --x 70%
+      --y -70%
+    &:nth-of-type(3)
+      --x -70%
+      --y 70%
+    &:nth-of-type(4)
+      --x 70%
+      --y 70%
+
+  &__handle
+    height 4vmin
+    width 4vmin
+    position absolute
+    left 10%
+    top 50%
+    transform translate3d(0, -50%, 1vmin)
+
+    & > div
+      position absolute
+      height 100%
+      width 100%
+      background-color 'hsl(45, 70%, %s)' % calc((var(--lightness, 20%)) + (var(--on) * 40%))
+
+      &:nth-of-type(1)
+        --lightness 25%
+
+      &:nth-of-type(2)
+        --lightness 30%
+        transform translate3d(0, 0, calc(var(--depth) * 1))
+
+
+  &__side
+    position absolute
+
+    &:nth-of-type(1)
+      --lightness 20%
+      height 100%
+      width 100%
+      transform translate3d(0, 0, 0)
+      z-index 3
+      background-color 'hsl(30, 20%, %s)' % calc((var(--lightness, 20%)) + (var(--on) * 40%))
+    &:nth-of-type(2)
+      --lightness 10%
+      height 100%
+      width 100%
+      transform translate3d(0, 0, calc(var(--depth) * -1))
+
+.door__side
+  background-color 'hsl(30, 20%, %s)' % calc((var(--lightness, 20%)) + (var(--on) * 40%))
+
+.social-links
+  width 44px
+  position fixed
+  left 1rem
+  bottom 1rem
+
+  > a + a
+    margin-top 0.5rem
+
+.social-link
+  height 44px
+  width 44px
+  display inline-block
+
+  &--jhey
+    --saturation 49%
+    img
+      transition filter 0.2s
+      filter saturate(var(--saturation))
+
+    &:hover
+      --saturation 100%
+
+  &--twitter
+    --saturation 49%
+    transition fill 0.2s
+    path
+      fill 'hsl(203, %s, 53%)' % var(--saturation)
+    &:hover
+      --saturation 89%
+
+
+
+  img, svg
+    height 100%
+    width 100%

@@ -1,0 +1,160 @@
+<htmL>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Версії Windows (ТАБЛИЦЯ)</title>
+    <style type="text/css">
+   H1 { 
+    font-size: 240%; 
+    font-family: Verdana, Arial, Helvetica,  italic; 
+    color: #336; 
+	text-align: center;
+	background-color: #cccccc;
+	
+   }
+   P {
+   font-size: 120%;
+   font-family: Verdana, monospace;
+  padding-left: 5%;
+  padding-right: 5%;
+   }
+   H2 {
+   ont-size: 200%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #226000; 
+	text-align: center;
+   }
+
+  </style>
+</head>
+
+<body>
+ <p><a href="index.html"><button>Назад на головну сторінку</button></a></p>
+<table border="1" align="center">
+ <tr>
+ <th>ДАТА</th>
+  <th>січень 2010</th>
+  <th>лютий 2010</th>
+  <th>березень 2010</th>
+  <th>квітень 2010</th>
+  <th>травень 2011</th>
+ 
+ </tr>
+ <tr>
+ <td>Усі версії</td>
+  <td>91,70 %</td>
+  <td>93,16 %</td>
+  <td>91,63 %</td>
+  <td>91,5 %</td>
+  <td>96,93 %</td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows XP </td>
+  <td>66,15 %	</td>
+  <td> 65,49 %</td>
+  <td> 64,46 %	</td>
+  <td>63,41 % </td>
+  <td> 59,78 %</td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows Vista	</td>
+  <td>17,47 %</td>
+  <td>16,51 %</td>
+  <td>16,01 %</td>
+  <td>15,60 %</td>
+  <td>15,77 %</td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows 2000 </td>
+  <td>0,57 % </td>
+  <td>0,56 % </td>
+  <td> 0,50 %</td>
+  <td>0,50 % </td>
+  <td>0,53 % </td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows 7		 </td>
+  <td> 7,57 %	</td>
+  <td>8,92 %	 </td>
+  <td> 10,23 %	</td>
+  <td> 11,68 %</td>
+  <td> 32,3 %</td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td> Windows Server 2003	</td>
+  <td> -</td>
+  <td> -</td>
+  <td> -</td>
+  <td> -</td>
+  <td> 0,17 %</td>
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows 98		 </td>
+  <td> 0,08 %	</td>
+  <td> 0,07 %</td>
+  <td> 0,07 %	</td>
+  <td> 0,07 %</td>
+  
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows ME		 </td>
+  <td>0,05 %	 </td>
+  <td>0,04 %	 </td>
+  <td> 0,04 %</td>
+  <td>0,03 %</td>
+  
+
+ 
+ 
+ </tr>
+  <tr>
+ <td>Windows NT				</td>
+  <td> 0,11 %</td>
+  <td> 0,52 %</td>
+  <td> 0,21 %</td>
+  <td> 0,17 %</td>
+
+
+ 
+ 
+ </tr>
+  <tr>
+ <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  
+
+ 
+ 
+ </tr>
+ 
+
+</table>
+
+
+</body>
+
+</html>
